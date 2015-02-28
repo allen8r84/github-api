@@ -3,8 +3,20 @@
     <head>
         <title>GitHub API Assignment</title>
     </head>
-    <body ng-controller="MainController">
-        
+    <body ng-controller="GitHubController">
+        <form>
+            <input ng-model="uesrText" placeholder="Search User"/>
+            <button ng-click="getUserData()">Search</button>
+        </form>
+        <ul>
+            <img src="{{user.avatar_url}}"></img>
+            <li><h1>Name is: {{user.name}}</h1></li>
+            <li>Works at: {{user.company}}</li>
+            <li>Contact Email: {{user.email}}</li>
+            <li>Public Repos: {{user.public_repos}}</li>
+            <li>Followers: {{user.followers}}</li>
+            <li>Following: {{user.following}}</li>
+        </ul>
         
     <script src="http://cdnjs.cloudflare.com/ajax/libs/angular.js/1.3.3/angular.min.js"></script>
     <script src="app.js"></script>
